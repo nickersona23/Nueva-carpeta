@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-require '../db.php';
+require '../lib/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (isset($_GET['nombre'])) {
