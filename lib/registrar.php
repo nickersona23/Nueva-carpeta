@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $stmt = $pdo->prepare('INSERT INTO usuario (nombre, apellido, email, pass, direccion, telefono) VALUES (?, ?, ?, ?, ?, ?)');
     if ($stmt->execute([$nombre, $apellido, $email, $pass, $direccion, $telefono])) {
+        header("Location: ../usuario_creado.php");
         echo "Registro exitoso";
     } else {
         echo "Error en el registro";

@@ -2,7 +2,7 @@
 session_start();
 session_unset();
 session_destroy();
-echo "Sesión cerrada";
+header("Location: ../cerrar_sesion.php")
 ?>
 
 <a href="login.php">Iniciar sesión</a>

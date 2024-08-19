@@ -1,0 +1,122 @@
+
+main {
+    min-height: calc(100svh - 212px);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito',sans-serif;
+}
+nav{
+    background: #6F5D44;
+    padding: 5px 40px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li{
+    padding: 15px 0;
+    cursor: pointer;
+}
+nav ul li.items{
+    position: relative;
+    width: auto;
+    margin: 0 16px;
+    text-align: center;
+    order: 3;
+    font-family: 'Nunito',sans-serif;
+}
+nav ul li.items:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 5px;
+    height: 2px;
+    width: 100%;
+    background: #ff9500;
+    opacity: 0;
+    transition: all 0.2s linear;
+    font-family: 'Nunito',sans-serif;
+    font-size: 38px;
+}
+nav ul li.items:hover:after{
+    opacity: 1;
+    bottom: 8px;
+}
+nav ul li.logo{
+    flex: 1;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    cursor: default;
+    user-select: none;
+}
+nav ul li a{
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: .4s;
+}
+nav ul li:hover a{
+    color: #ff9500;
+}
+nav ul li i{
+    font-size: 38px;
+}
+nav ul li.btn{
+    display: none;
+}
+nav ul li.btn.hide i:before{
+    content: '\f00d';
+}
+@media all and (max-width: 900px){
+    nav{
+        padding: 5px 30px;
+    }
+    nav ul li.items{
+        width: 100%;
+        display: none;
+    }
+    nav ul li.items.show{
+        display: block;
+    }
+    nav ul li.btn{
+        display: block;
+    }
+    nav ul li.items:hover{
+        border-radius: 5px;
+        box-shadow: inset 0 0 5px #ff9500,
+                    inset 0 0 10px #ff9500;
+    }
+    nav ul li.items:hover:after{
+        opacity: 0;
+    }
+}
+.logo_header{
+    width: 100px;
+    height: 100px;
+}
+.user_icon{
+    width: 100%;
+    height: 6vh;
+}
+
+
+
+/* Pie de página */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
