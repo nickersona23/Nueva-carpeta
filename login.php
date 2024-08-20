@@ -22,7 +22,7 @@
                 <input type="password" id="password" name="pass" required>
             </div>
             <button type="submit" class="btn">Iniciar sesión</button>
-            <p>No tienes una cuenta? <a href="php/registro.php">Regístrate aquí</a></p>           
+            <p>No tienes una cuenta? <a href="register.php">Regístrate aquí</a></p>           
         </form>
     </div>
 </body>

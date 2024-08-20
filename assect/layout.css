@@ -1,39 +1,47 @@
-
 main {
     min-height: calc(100svh - 212px);
+    max-height: calc(100svh - 212px);
+    background-color: #CCC5B7;
+    overflow: auto
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito',sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
-nav{
+
+nav {
     background: #6F5D44;
     padding: 5px 40px;
 }
-nav ul{
+
+nav ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
-nav ul li{
+
+nav ul li {
     padding: 15px 0;
     cursor: pointer;
 }
-nav ul li.items{
+
+nav ul li.items {
     position: relative;
     width: auto;
     margin: 0 16px;
     text-align: center;
     order: 3;
-    font-family: 'Nunito',sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
-nav ul li.items:after{
+
+nav ul li.items:after {
     position: absolute;
     content: '';
     left: 0;
@@ -43,14 +51,16 @@ nav ul li.items:after{
     background: #ff9500;
     opacity: 0;
     transition: all 0.2s linear;
-    font-family: 'Nunito',sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 38px;
 }
-nav ul li.items:hover:after{
+
+nav ul li.items:hover:after {
     opacity: 1;
     bottom: 8px;
 }
-nav ul li.logo{
+
+nav ul li.logo {
     flex: 1;
     color: white;
     font-size: 23px;
@@ -58,52 +68,65 @@ nav ul li.logo{
     cursor: default;
     user-select: none;
 }
-nav ul li a{
+
+nav ul li a {
     color: white;
     font-size: 24px;
     text-decoration: none;
     transition: .4s;
 }
-nav ul li:hover a{
+
+nav ul li:hover a {
     color: #ff9500;
 }
-nav ul li i{
+
+nav ul li i {
     font-size: 38px;
 }
-nav ul li.btn{
+
+nav ul li.btn {
     display: none;
 }
-nav ul li.btn.hide i:before{
+
+nav ul li.btn.hide i:before {
     content: '\f00d';
 }
-@media all and (max-width: 900px){
-    nav{
+
+@media all and (max-width: 900px) {
+    nav {
         padding: 5px 30px;
     }
-    nav ul li.items{
+
+    nav ul li.items {
         width: 100%;
         display: none;
     }
-    nav ul li.items.show{
+
+    nav ul li.items.show {
         display: block;
     }
-    nav ul li.btn{
+
+    nav ul li.btn {
         display: block;
     }
-    nav ul li.items:hover{
+
+    nav ul li.items:hover {
         border-radius: 5px;
         box-shadow: inset 0 0 5px #ff9500,
-                    inset 0 0 10px #ff9500;
+            inset 0 0 10px #ff9500;
     }
-    nav ul li.items:hover:after{
+
+    nav ul li.items:hover:after {
         opacity: 0;
     }
 }
-.logo_header{
+
+.logo_header {
     width: 100px;
     height: 100px;
 }
-.user_icon{
+
+.user_icon {
     width: 100%;
     height: 6vh;
 }
@@ -119,7 +142,7 @@ nav ul li.btn.hide i:before{
     position: relative;
     bottom: 0;
     width: 100%;
-   
+
 }
 
 #btn-carrito {
@@ -127,9 +150,9 @@ nav ul li.btn.hide i:before{
     height: 50px;
     width: 50px;
     position: absolute;
-    right: 20px;
+    right: 25px;
     top: 170px;
-    padding: 4px;
+    padding: 7px;
     outline: none;
     border-style: none;
     border-radius: 10px;
@@ -137,47 +160,203 @@ nav ul li.btn.hide i:before{
     color: white;
     cursor: pointer;
 }
+
 #btn-carrito ion-icon {
     width: 100%;
     height: 100%;
 }
+
 .cerrar_carrito {
     height: 100svh;
-    width: 100svw;
-    position: absolute;
+    width: 100%;
+    position: fixed;
     z-index: 10;
     top: 0;
     background-color: rgba(0, 0, 0, 0.5);
 
 }
+
 .container_carrito {
-    position: absolute;
+    position: fixed;
     height: 100svh;
     z-index: 20;
-    background-color: yellow;
-    padding: 8px;
+    background-color: #E5BB89;
+
     right: 0;
     top: 0;
-    width: 500px;
+    width: 416px;
 }
+
 .hidden {
     display: none;
 }
 
 
-<div class="bg-white shadow-md rounded-lg max-w-sm">
-    <div class="flex justify-between items-center p-4 border-b">
-        <h2 class="text-lg font-semibold">Nombre del Producto</h2>
-        <button class="text-red-500 hover:text-red-700">×</button>
-    </div>
-    <div class="p-4 flex">
-        <img src="https://via.placeholder.com/150" alt="Imagen del Producto" class="w-1/3 h-auto object-cover rounded-md">
-        <div class="ml-4">
-            <p class="text-gray-700">Descripción del producto. Aquí va una breve descripción del producto.</p>
-            <p class="mt-2 text-xl font-bold text-gray-900">$Precio</p>
-        </div>
-    </div>
-    <div class="p-4">
-        <button class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Pagar</button>
-    </div>
-</div>
+.card-container {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    max-width: 24rem;
+    height: 278px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.card-close-button {
+    color: #ef4444;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    border-style: none;
+}
+
+.card-close-button:hover {
+    color: #b91c1c;
+}
+
+.card-content {
+    padding: 1rem;
+    display: flex;
+}
+
+.card-image {
+    width: 33.333%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.375rem;
+}
+
+.card-description {
+    margin-left: 1rem;
+}
+
+.card-text {
+    color: #4b5563;
+}
+
+.card-price {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.card-footer {
+    padding: 1rem;
+}
+
+.card-pay-button {
+    width: 100%;
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.5rem 0;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border-style: none;
+}
+
+.card-pay-button:hover {
+    background-color: #2563eb;
+}
+
+.container {
+    display: grid;
+    padding: 16px;
+    gap: 8px;
+    max-height: calc(100svh - 58px);
+    overflow: auto;
+    scrollbar-gutter: stable;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    width: fit-content;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.container_categorie {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width: 640px) {
+    .container_categorie {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container_categorie {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container_categorie {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container_categorie {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container_categorie {
+        max-width: 1536px;
+    }
+}
+
+.title__carrito {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 16px;
+    padding-bottom: 0;
+}
