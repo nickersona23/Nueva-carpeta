@@ -1,7 +1,8 @@
 main {
-    min-height: calc(100svh - 212px);
+    height: fit-content;
+    min-height: calc(100vh - (130px + 36px));
     max-height: calc(100svh - 212px);
-    background-color: #CCC5B7;
+    background-color: #e0dfdd;
     overflow: auto
 }
 
@@ -15,8 +16,8 @@ main {
 }
 
 nav {
-    background: #6F5D44;
-    padding: 5px 40px;
+    background: #050505;
+    padding: 5px 50px;
 }
 
 nav ul {
@@ -28,7 +29,7 @@ nav ul {
 }
 
 nav ul li {
-    padding: 15px 0;
+    padding: 6px 0;
     cursor: pointer;
 }
 
@@ -77,7 +78,7 @@ nav ul li a {
 }
 
 nav ul li:hover a {
-    color: #ff9500;
+    color: #fc9517;
 }
 
 nav ul li i {
@@ -135,13 +136,14 @@ nav ul li.btn.hide i:before {
 
 /* Pie de página */
 .footer {
-    background-color: #333;
+    background-color: #636262;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 7px 0;
     position: relative;
     bottom: 0;
     width: 100%;
+    height: 100%;
 
 }
 
@@ -150,8 +152,8 @@ nav ul li.btn.hide i:before {
     height: 50px;
     width: 50px;
     position: absolute;
-    right: 25px;
-    top: 170px;
+    right: 50px;
+    top: 145px;
     padding: 7px;
     outline: none;
     border-style: none;
@@ -180,8 +182,7 @@ nav ul li.btn.hide i:before {
     position: fixed;
     height: 100svh;
     z-index: 20;
-    background-color: #E5BB89;
-
+    background-color: #eeecec;
     right: 0;
     top: 0;
     width: 416px;
@@ -214,9 +215,9 @@ nav ul li.btn.hide i:before {
 }
 
 .card-close-button {
-    color: #ef4444;
+    color: #f80d0d;
     cursor: pointer;
-    transition: color 0.2s ease-in-out;
+    transition: color 0.s ease-in-out;
     border-style: none;
 }
 
@@ -257,7 +258,7 @@ nav ul li.btn.hide i:before {
 
 .card-pay-button {
     width: 100%;
-    background-color: #3b82f6;
+    background-color: #f7ab1f;
     color: white;
     padding: 0.5rem 0;
     border-radius: 0.375rem;
@@ -267,7 +268,7 @@ nav ul li.btn.hide i:before {
 }
 
 .card-pay-button:hover {
-    background-color: #2563eb;
+    background-color: #dd8705;
 }
 
 .container {
