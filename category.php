@@ -13,7 +13,30 @@
     <?php 
     require "lib/navbar.php"
     ?>
-    <main class=""></main>
+    <main class="">
+    <?php
+    require './lib/db.php';
+
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        if (isset($_GET['nombre'])) {
+            $nombre = $_GET['nombre'];
+            $stmt = $pdo->prepare('SELECT * FROM producto WHERE nombre LIKE ?');
+            $stmt->execute(["%$nombre%"]);
+            $productos = $stmt->fetchAll();
+            echo $productos["id"];
+        } else {
+            $stmt = $pdo->query('SELECT * FROM producto');
+            $productos = $stmt->fetchAll();
+            echo $productos[0]["id"];
+        }
+    } else {
+        $stmt = $pdo->query('SELECT * FROM producto');
+        $productos = $stmt->fetchAll();
+        echo $productos[0]["id"];
+    }
+    ?>
+
+    </main>
     <?php 
        require "lib/footer.php"
     ?>
